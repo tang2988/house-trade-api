@@ -13,7 +13,7 @@ public class ProductVo implements Serializable {
 	/**
 	 * 产品Id
 	 */
-	public Long product_id;
+	public Long product_id; 
 	/**
 	 * 标题
 	 */
@@ -71,16 +71,42 @@ public class ProductVo implements Serializable {
 	 */
 	public String periphery;
 
+	/**
+	 * 阅读数
+	 */
+	public Long readthenumber;
+	
 	public ProductVo() {
 	}
 
-	public Long getProductid() {
+	
+	
+
+	public Long getReadthenumber() {
+		return readthenumber;
+	}
+
+
+
+
+	public void setReadthenumber(Long readthenumber) {
+		this.readthenumber = readthenumber;
+	}
+
+
+
+
+	public Long getProduct_id() {
 		return product_id;
 	}
 
-	public void setProductid(Long productid) {
-		this.product_id = productid;
+
+
+	public void setProduct_id(Long product_id) {
+		this.product_id = product_id;
 	}
+
+
 
 	public String getTitle() {
 		return title;
@@ -196,11 +222,11 @@ public class ProductVo implements Serializable {
 
 	@Override
 	public String toString() {
-		return "ProductPo [productid=" + product_id + ", title=" + title + ", subtitle=" + subtitle + ", content="
+		return "ProductPo [product_id=" + product_id + ", title=" + title + ", subtitle=" + subtitle + ", content="
 				+ content + ", writingTime=" + writingTime + ", userName=" + userName + ", masterGraph=" + masterGraph
 				+ ", province=" + province + ", city=" + city + ", area=" + area + ", address=" + address
 				+ ", realEstateName=" + realEstateName + ", struts=" + struts + ", contactInformation="
-				+ contactInformation + ", periphery=" + periphery + "]";
+				+ contactInformation + ", periphery=" + periphery +  ",readthenumber="+readthenumber+"]";
 	}
 
 }

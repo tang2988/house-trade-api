@@ -7,11 +7,15 @@ public class CustomerAndProductVo implements Serializable {
 	/**
 	 * 
 	 */
-	public static final long serialVersionUID = 6306884421116376745L;
+	public static final long serialVersionUID = -2976863837794904398L;
+	/**
+	 * 
+	 */
+
 
 	public Long product_id;
 	public String nickName;
-	public String headerlconUrl;
+	public String headerIconUrl;
 	public String title;
 	public String subtitle;
 	public String masterGraph;
@@ -19,21 +23,42 @@ public class CustomerAndProductVo implements Serializable {
 	public CustomerAndProductVo() {
 	}
 
+	
+	
+	public Long getProduct_id() {
+		return product_id;
+	}
+
+
+
+	public void setProduct_id(Long product_id) {
+		this.product_id = product_id;
+	}
+
+
+
 	public String getNickName() {
 		return nickName;
 	}
+	
 
 	public void setNickName(String nickName) {
 		this.nickName = nickName;
 	}
 
-	public String getHeaderlconUrl() {
-		return headerlconUrl;
+	
+
+	public String getHeaderIconUrl() {
+		return headerIconUrl;
 	}
 
-	public void setHeaderlconUrl(String headerlconUrl) {
-		this.headerlconUrl = headerlconUrl;
+
+
+	public void setHeaderIconUrl(String headerIconUrl) {
+		this.headerIconUrl = headerIconUrl;
 	}
+
+
 
 	public String getTitle() {
 		return title;
@@ -60,7 +85,7 @@ public class CustomerAndProductVo implements Serializable {
 	}
 
 	public String toString() {
-		return "CustomerAndProductPo [nickName=" + nickName + ", headerlconUrl=" + headerlconUrl + ", title=" + title
+		return "CustomerAndProductVo [nickName=" + nickName + ", headerlconUrl=" + headerIconUrl + ", title=" + title
 				+ ", subtitle=" + subtitle + ", masterGraph=" + masterGraph + "]";
 	}
 
