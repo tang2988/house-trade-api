@@ -3,12 +3,22 @@ package com.xxh.fang.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class CommentVo implements Serializable {
+public class CommentAndCustomerVo implements Serializable {
 
 	/**
 	 * 
 	 */
-	public static final long serialVersionUID = -5510578543294447829L;
+	public static final long serialVersionUID = 3046989764301364952L;
+
+	/**
+	 * 昵称
+	 */
+	public String nickName;
+
+	/**
+	 * 用户头像
+	 */
+	public String headerIconUrl;
 
 	/**
 	 * 评论id
@@ -40,7 +50,23 @@ public class CommentVo implements Serializable {
 	 */
 	public Long pointOfpraise;
 
-	public CommentVo() {
+	public CommentAndCustomerVo() {
+	}
+
+	public String getNickName() {
+		return nickName;
+	}
+
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+
+	public String getHeaderIconUrl() {
+		return headerIconUrl;
+	}
+
+	public void setHeaderIconUrl(String headerIconUrl) {
+		this.headerIconUrl = headerIconUrl;
 	}
 
 	public Long getCommentOnID() {
@@ -92,9 +118,9 @@ public class CommentVo implements Serializable {
 	}
 
 	public String toString() {
-		return "CommentVo [commentOnID=" + commentOnID + ", customerId=" + customerId + ", content=" + content
-				+ ", commentOfTime=" + commentOfTime + ", product_id=" + product_id + ",  pointOfpraise="
-				+ pointOfpraise + "]";
+		return "CommentAndCustomerVo [nickName=" + nickName + ", headerIconUrl=" + headerIconUrl + ", commentOnID="
+				+ commentOnID + ", customerId=" + customerId + ", content=" + content + ", commentOfTime="
+				+ commentOfTime + ", product_id=" + product_id + ", pointOfpraise=" + pointOfpraise + "]";
 	}
 
 }

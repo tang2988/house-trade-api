@@ -13,7 +13,7 @@ public class ProductVo implements Serializable {
 	/**
 	 * 产品Id
 	 */
-	public Long product_id; 
+	public Long product_id;
 	/**
 	 * 标题
 	 */
@@ -74,39 +74,40 @@ public class ProductVo implements Serializable {
 	/**
 	 * 阅读数
 	 */
+
 	public Long readthenumber;
-	
+
+	/**
+	 * 用户id
+	 */
+	public Long customerId;
+
 	public ProductVo() {
 	}
 
-	
-	
+	public Long getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(Long customerId) {
+		this.customerId = customerId;
+	}
 
 	public Long getReadthenumber() {
 		return readthenumber;
 	}
 
-
-
-
 	public void setReadthenumber(Long readthenumber) {
 		this.readthenumber = readthenumber;
 	}
-
-
-
 
 	public Long getProduct_id() {
 		return product_id;
 	}
 
-
-
 	public void setProduct_id(Long product_id) {
 		this.product_id = product_id;
 	}
-
-
 
 	public String getTitle() {
 		return title;
@@ -220,13 +221,13 @@ public class ProductVo implements Serializable {
 		this.periphery = periphery;
 	}
 
-	@Override
 	public String toString() {
-		return "ProductPo [product_id=" + product_id + ", title=" + title + ", subtitle=" + subtitle + ", content="
-				+ content + ", writingTime=" + writingTime + ", userName=" + userName + ", masterGraph=" + masterGraph
-				+ ", province=" + province + ", city=" + city + ", area=" + area + ", address=" + address
-				+ ", realEstateName=" + realEstateName + ", struts=" + struts + ", contactInformation="
-				+ contactInformation + ", periphery=" + periphery +  ",readthenumber="+readthenumber+"]";
+		return "ProductVo [product_id=" + product_id + ",customerId=" + customerId + ",title=" + title + ", subtitle="
+				+ subtitle + ", content=" + content + ", writingTime=" + writingTime + ", userName=" + userName
+				+ ", masterGraph=" + masterGraph + ", province=" + province + ", city=" + city + ", area=" + area
+				+ ", address=" + address + ", realEstateName=" + realEstateName + ", struts=" + struts
+				+ ", contactInformation=" + contactInformation + ", periphery=" + periphery + ",readthenumber="
+				+ readthenumber + "]";
 	}
 
 }
